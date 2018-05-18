@@ -1,0 +1,6 @@
+{
+    "cycle_time_in_minutes" : 25,
+    "short_break_time_in_minutes" : 5,
+    "cycles_between_long_breaks" : 4,
+    "long_break_time_in_minutes" : 15,
+}
