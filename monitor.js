@@ -59,6 +59,9 @@ function change_status_mode(status, status_file){ // a utility used in active mo
     }
     status.start_time = new Date();
 
+    // notify user of mode change
+    notify_user("time is up! changing mode to " + status.mode);
+
     // record the changes
     fs.writeFileSync(status_file, JSON.stringify(status));
 }
