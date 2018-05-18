@@ -1,6 +1,8 @@
 {
-    "cycle_time_in_minutes" : 25,
-    "short_break_time_in_minutes" : 5,
-    "cycles_between_long_breaks" : 4,
-    "long_break_time_in_minutes" : 15,
+    "time_in_minutes" : {
+        "work" : 25,
+        "break_short" : 5,
+        "break_long" : 15
+    },
+    "cycles_between_long_breaks" : 4
 }

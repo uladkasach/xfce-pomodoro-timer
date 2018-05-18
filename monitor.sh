@@ -29,6 +29,6 @@ touch $LOCK
 
 ## post result (w/ mutex exclusion)
 ( flock -x 200 ## ensure that this part is not done atomically
-    RESPONSE=$($NODE $APP_DIRECTORY/monitor.js $CONFIG_DIRECTORY);# run node.js and echo output instead
+    RESPONSE=$($NODE $APP_DIRECTORY/monitor.js $CONFIG_DIRECTORY $1);# run node.js and echo output instead
     echo $RESPONSE;
 ) 200> "$LOCK";
