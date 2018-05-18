@@ -2,7 +2,7 @@ var output_status = require("./utils/output_status.js");
 var notify_user = require("./utils/xfce_notification.js");
 var calculate_time_remaining = require("./utils/calculate_time_remaining.js");
 
-// 
+//
 
 // define environment constants
 var package_dir = process.env.src_root = __dirname;
@@ -75,7 +75,7 @@ if(status.active === true){
     // display time and display stop button
     var output = output_status({
         tool : "click to stop the timer",
-        img : package_dir + "/assets/icons/stop.png",
+        img : package_dir + "/assets/icons/stop-20.png",
         txt : time_remaining,
         click : package_dir + "/monitor.sh stop"
     });
@@ -83,7 +83,7 @@ if(status.active === true){
     // display start button
     var output = output_status({
         tool : "click to start the timer",
-        img : package_dir + "/assets/icons/play.png",
+        img : package_dir + "/assets/icons/timer-20.png",
         click : package_dir + "/monitor.sh start"
     })
 }
