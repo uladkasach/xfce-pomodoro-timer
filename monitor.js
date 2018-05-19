@@ -21,7 +21,7 @@ var status = JSON.parse(fs.readFileSync(status_file, 'utf8'));
     handle commands
 */
 if(command == "stop"){
-    notify_user("stoping timer");
+    //notify_user("stoping timer");
     status.active = false;
     fs.writeFileSync(status_file, JSON.stringify(status));
 }
@@ -74,6 +74,9 @@ if(status.active === true){
 
     // if break, append "B:" to start of time
     if(status.mode != "work") time_remaining = "B:" + time_remaining;
+
+    // if on cycle > 0, append cycle time
+    if(status.cycles > 0) time_remaining = time_remaining + " (" + status.cycles + ")";
 
     // display time and display stop button
     var output = output_status({
