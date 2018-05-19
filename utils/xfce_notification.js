@@ -11,11 +11,11 @@ var execute_command = function(command){
     })
 }
 
-var duration = 5;
+var duration_ms = 2 * 1000;
 var create_notification = async function(text, icon){
     var icon_string = "";
     if(typeof icon == "string") icon_string = " -i " + icon
-    var command = 'notify-send -t ' + duration + icon_string + ' "Pomodoro Timer" "'+text+'"';
+    var command = 'notify-send -t ' + duration_ms + icon_string + ' "Pomodoro Timer" "'+text+'"';
     var response = await execute_command(command);
     return response;
 }
